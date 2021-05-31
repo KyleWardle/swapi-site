@@ -1,0 +1,11 @@
+$star-wars-yellow: #ffe81f;
+
+
+$primary : $star-wars-yellow;
+
+@import "bootstrap";
+
+.nav-pills .nav-link.active {
+    background-color: $star-wars-yellow;
+    color: black;
+}
