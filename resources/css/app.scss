@@ -9,3 +9,17 @@ $primary : $star-wars-yellow;
     background-color: $star-wars-yellow;
     color: black;
 }
+
+.film-card.card-img-top {
+    width: 100%;
+    height: 15vw;
+    object-fit: cover;
+}
+
+.border-black {
+    border-color: black;
+}
+
+.bg-stars {
+    background: black url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png) repeat;
+}

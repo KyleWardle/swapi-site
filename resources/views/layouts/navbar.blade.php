@@ -1,6 +1,6 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark bg-stars">
     <div class="container-fluid">
-        <a class="navbar-brand mx-auto" href="/">
+        <a class="navbar-brand my-5 mx-auto" href="/">
             <div class="row">
                 <div class="col-8">
                     <img src="/images/star-wars-logo.png" alt="" height="100" class="d-inline-block align-text-middle mt-1">

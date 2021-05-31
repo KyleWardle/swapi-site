@@ -1,37 +1,19 @@
 <?php
 
-namespace App\Http\Services\StarWarsAPI;
+namespace App\Http\Services\StarWarsApi;
 
-class StarWarsAPIResponse
+class StarWarsResponse
 {
-    private int $resultCount;
     private array $results;
 
-    public function __construct(int $count, array $results)
+    public function __construct(array $results)
     {
-        $this->resultCount = $count;
         $this->results = $results;
     }
 
     /**
-     * @return int|mixed
-     */
-    public function getResultCount(): int
-    {
-        return $this->resultCount;
-    }
-
-    /**
-     * @param int|mixed $resultCount
-     */
-    public function setResultCount(int $resultCount): void
-    {
-        $this->resultCount = $resultCount;
-    }
-
-    /**
      * @param int|null $groupBy - Splits the results into groups of a size of this variable
-     * @return array|mixed
+     * @return array
      */
     public function getResults(?int $groupBy = null): array
     {

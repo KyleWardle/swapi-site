@@ -2,35 +2,36 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Services\StarWarsAPI\StarWarsApiException;
-use App\Http\Services\StarWarsAPI\StarWarsAPIService;
+use App\Http\Services\StarWarsApi\StarWarsApiException;
+use App\Http\Services\StarWarsApi\StarWarsService;
+use App\Http\Services\StarWarsApi\Swapi\SwapiApiException;
 use Illuminate\Contracts\View\View;
 
 class FilmsController extends Controller
 {
     /**
-     * @var StarWarsAPIService
+     * @var StarWarsService
      */
-    private StarWarsAPIService $starWarsAPIService;
+    private StarWarsService $starWarsAPIService;
 
     /**
      * FilmsController constructor.
-     * @param StarWarsAPIService $starWarsAPIService
+     * @param StarWarsService $starWarsAPIService
      */
-    public function __construct(StarWarsAPIService $starWarsAPIService)
+    public function __construct(StarWarsService $starWarsAPIService)
     {
         $this->starWarsAPIService = $starWarsAPIService;
     }
 
     /**
-     * @throws StarWarsApiException
+     * @throws SwapiApiException
      */
     public function index(): View
     {
         $response = $this->starWarsAPIService->getFilms();
 
         return view('index', [
-            'groupedFilms' => $response->getResults(3)
+            'groupedFilms' => $response->getResults(6)
         ]);
     }
 }

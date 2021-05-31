@@ -129,7 +129,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Http/Services/StarWarsApi" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -137,10 +137,15 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/Http/Services/StarWarsApi" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/Http/Services/StarWarsAPI/SWAPI" />
       <recent name="$PROJECT_DIR$/public/images" />
       <recent name="$PROJECT_DIR$/app/Http/Services/StarWarsAPI" />
       <recent name="$PROJECT_DIR$/app/Http/Services/StarWarsAPI/Responses" />
@@ -164,7 +169,7 @@
       <workItem from="1621925855122" duration="3000" />
       <workItem from="1621932240810" duration="114000" />
       <workItem from="1622048207042" duration="855000" />
-      <workItem from="1622291320831" duration="1242000" />
+      <workItem from="1622291320831" duration="9812000" />
     </task>
     <servers />
   </component>
@@ -172,10 +177,26 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="-1615" y="331" width="670" height="676" key="search.everywhere.popup" timestamp="1622048746945">
+    <state x="-1484" y="400" key="#com.intellij.ide.util.MemberChooser" timestamp="1622468959842">
       <screen x="-2560" y="0" width="2560" height="1440" />
     </state>
-    <state x="-1615" y="331" width="670" height="676" key="search.everywhere.popup/0.0.2560.1440/-2560.0.2560.1440/2560.264.1792.1120@-2560.0.2560.1440" timestamp="1622048746945" />
+    <state x="-1484" y="400" key="#com.intellij.ide.util.MemberChooser/0.0.2560.1440/-2560.0.2560.1440/2560.264.1792.1120@-2560.0.2560.1440" timestamp="1622468959842" />
+    <state x="-1644" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1622467767222">
+      <screen x="-2560" y="0" width="2560" height="1440" />
+    </state>
+    <state x="-1644" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.2560.1440/-2560.0.2560.1440/2560.264.1792.1120@-2560.0.2560.1440" timestamp="1622467767222" />
+    <state x="-1542" y="482" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1622469452822">
+      <screen x="-2560" y="0" width="2560" height="1440" />
+    </state>
+    <state x="-1542" y="482" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.2560.1440/-2560.0.2560.1440/2560.264.1792.1120@-2560.0.2560.1440" timestamp="1622469452822" />
+    <state x="-1492" y="655" key="#com.jetbrains.php.lang.intentions.PhpImportClassDialog#" timestamp="1622469461078">
+      <screen x="-2560" y="0" width="2560" height="1440" />
+    </state>
+    <state x="-1492" y="655" key="#com.jetbrains.php.lang.intentions.PhpImportClassDialog#/0.0.2560.1440/-2560.0.2560.1440/2560.264.1792.1120@-2560.0.2560.1440" timestamp="1622469461078" />
+    <state x="-1615" y="331" width="670" height="676" key="search.everywhere.popup" timestamp="1622473659269">
+      <screen x="-2560" y="0" width="2560" height="1440" />
+    </state>
+    <state x="-1615" y="331" width="670" height="676" key="search.everywhere.popup/0.0.2560.1440/-2560.0.2560.1440/2560.264.1792.1120@-2560.0.2560.1440" timestamp="1622473659269" />
     <state x="945" y="323" width="670" height="613" key="search.everywhere.popup/0.23.2560.1305/-2560.23.2560.1417/2560.287.1792.1097@0.23.2560.1305" timestamp="1621878913926" />
   </component>
 </project>

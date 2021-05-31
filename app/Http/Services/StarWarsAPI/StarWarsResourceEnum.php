@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Services\StarWarsAPI;
+namespace App\Http\Services\StarWarsApi;
 
 class StarWarsResourceEnum
 {

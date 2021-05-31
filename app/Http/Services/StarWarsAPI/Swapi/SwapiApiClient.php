@@ -1,12 +1,11 @@
 <?php
 
-namespace App\Http\Services\StarWarsAPI;
+namespace App\Http\Services\StarWarsApi\Swapi;
 
-use Exception;
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\GuzzleException;
 
-class StarWarsAPIClient
+class SwapiApiClient
 {
     public const REQUEST_POST = 'POST';
     public const REQUEST_GET = 'GET';
@@ -24,36 +23,36 @@ class StarWarsAPIClient
      * @param string $resource
      * @param int|null $resourceId
      * @param string $method
-     * @return StarWarsAPIResponse
-     * @throws StarWarsApiException
+     * @return SwapiApiResponse
+     * @throws SwapiApiException
      */
-    public function queryApi(
+    public function getResource(
         string $resource,
         int $resourceId = null,
         string $method = self::REQUEST_GET
-    ): StarWarsAPIResponse
+    ): SwapiApiResponse
     {
         $client = new Client;
 
-        $uri = $this->baseUri . '/' . $resource;
+        $url = $this->baseUri . '/' . $resource;
 
         if ($resourceId) {
-            $uri = $uri . '/' . $resourceId;
+            $url = $url . '/' . $resourceId;
         }
 
         try {
-            $response = $client->request($method, $uri);
+            $response = $client->request($method, $url);
         } catch (GuzzleException $e) {
-            throw new StarWarsApiException($e->getMessage(), $e->getCode());
+            throw new SwapiApiException($e->getMessage(), $e->getCode());
         }
 
         $contents = $response->getBody()->getContents();
         $decodedResponse = json_decode($contents, true);
 
         if ($resourceId) {
-            return new StarWarsAPIResponse(1, [$decodedResponse]);
+            return new SwapiApiResponse(1, [$decodedResponse]);
         }
 
-        return new StarWarsAPIResponse($decodedResponse['count'], $decodedResponse['results']);
+        return new SwapiApiResponse($decodedResponse['count'], $decodedResponse['results']);
     }
 }

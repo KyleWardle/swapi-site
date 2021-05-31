@@ -2,15 +2,20 @@
 
 namespace App\Providers;
 
-use App\Http\Services\StarWarsAPI\StarWarsAPIClient;
-use App\Http\Services\StarWarsAPI\StarWarsAPIService;
+use App\Http\Services\ImageSearch\Client\ImageSearchClientInterface;
+use App\Http\Services\ImageSearch\Client\RapidApiWebSearch\Client;
+use App\Http\Services\ImageSearch\ImageSearchService;
+use App\Http\Services\StarWarsApi\StarWarsService;
+use App\Http\Services\StarWarsApi\Swapi\SwapiApiClient;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
 {
     public $singletons = [
-        StarWarsAPIService::class => StarWarsAPIService::class,
-        StarWarsAPIClient::class => StarWarsAPIClient::class
+        StarWarsService::class => StarWarsService::class,
+        SwapiApiClient::class => SwapiApiClient::class,
+        ImageSearchClientInterface::class => Client::class,
+        ImageSearchService::class => ImageSearchService::class
     ];
 
     /**
