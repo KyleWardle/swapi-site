@@ -45,4 +45,23 @@ class StarWarsService
 
         return new StarWarsResponse($films);
     }
+
+    /**
+     * @param int|null $id
+     * @return StarWarsResponse
+     * @throws Swapi\SwapiApiException
+     */
+    public function getPeople(?int $id = null): StarWarsResponse
+    {
+        $peopleResponse = $this->swapiApiClient->getResource(StarWarsResourceEnum::PEOPLE, $id);
+        $people = [];
+
+        foreach ($peopleResponse->getResults() as $person) {
+            $imageSearchTerm = 'star wars ' . $person['name'];
+            $person['image'] = $this->imageSearchService->searchForImage($imageSearchTerm);
+            $people[] = $person;
+        }
+
+        return new StarWarsResponse($people);
+    }
 }

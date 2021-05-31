@@ -16,9 +16,10 @@
 
 </head>
 <body>
-    @include('layouts.navbar')
+        @include('layouts.navbar')
         <main class="container-fluid ">
             @yield('content')
         </main>
+        @include('layouts.footer')
     </body>
 </html>

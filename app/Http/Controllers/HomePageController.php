@@ -2,12 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Services\StarWarsApi\StarWarsApiException;
 use App\Http\Services\StarWarsApi\StarWarsService;
 use App\Http\Services\StarWarsApi\Swapi\SwapiApiException;
 use Illuminate\Contracts\View\View;
 
-class FilmsController extends Controller
+class HomePageController extends Controller
 {
     /**
      * @var StarWarsService
@@ -28,10 +27,9 @@ class FilmsController extends Controller
      */
     public function index(): View
     {
-        $response = $this->starWarsAPIService->getFilms();
-
-        return view('index', [
-            'groupedFilms' => $response->getResults(6)
+        return view('homepage.index', [
+            'groupedFilms' => $this->starWarsAPIService->getFilms()->getResults(6),
+            'groupedPeople' => $this->starWarsAPIService->getPeople()->getResults(6),
         ]);
     }
 }
